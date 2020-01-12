@@ -7,9 +7,11 @@ body{
     font-size: 20px;
     background-color: 	#8189ff;
     color: blueviolet;
-    padding-top: 15px;
 }
-
+a{
+    color: inherit;
+    text-decoration: none;
+}
 `;
 
 export default GlobalStyle;
