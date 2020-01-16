@@ -28,7 +28,6 @@ export default class extends Component {
     this.setState({
       idTerm: value
     });
-    console.log(this.state.idTerm);
   };
 
   render() {

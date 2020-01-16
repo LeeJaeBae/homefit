@@ -1,11 +1,12 @@
 import React, { Component } from "react";
-import { Link, withRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
+import Navigator from "./Navigator/NavigatorPresenter";
 
 const Head = styled.div`
   width: auto;
   height: 60px;
-  background-color: violet;
+  background-color: #32407b;
 `;
 const Logo = styled(Link)`
   position: absolute;
@@ -13,22 +14,7 @@ const Logo = styled(Link)`
   width: 200px;
   height: 60px;
 
-  background-color: black;
-
-  font-size: 34px;
-  color: whitesmoke;
-  text-align: center;
-  p {
-    margin-top: 15px;
-  }
-`;
-const Menu = styled(Link)`
-  position: absolute;
-  left: 0%;
-  width: 200px;
-  height: 60px;
-
-  background-color: black;
+  background-color: 32407b;
 
   font-size: 34px;
   color: whitesmoke;
@@ -43,7 +29,7 @@ const Start = styled(Link)`
   width: 200px;
   height: 60px;
 
-  background-color: black;
+  background-color: 32407b;
 
   font-size: 34px;
   color: whitesmoke;
@@ -54,13 +40,24 @@ const Start = styled(Link)`
 `;
 
 class Header extends Component {
+  state = { navOn: false };
+  isNavOn = () => {
+    const { navOn } = this.state;
+    if (navOn) {
+      this.setState({ navOn: false });
+    } else {
+      this.setState({ navOn: true });
+    }
+  };
   render() {
+    console.log(this);
     return (
       <>
         <Head>
-          <Menu to="/:id/detail">
-            <p>MENU</p>
-          </Menu>
+          <Navigator
+            navOn={this.state.navOn}
+            isNavOn={this.isNavOn}
+          ></Navigator>
           <Logo to="/">
             <p>LOGO</p>
           </Logo>

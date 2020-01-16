@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 import Header from "./Header";
 import Home from "../Routes/Home";
+import Login from "../Routes/Login";
 import Detail from "../Routes/Detail";
 import Exercise from "../Routes/Exercise";
 
@@ -15,6 +16,7 @@ export default class extends Component {
           <Header />
           <Switch>
             <Route path="/" exact component={Home} />
+            <Route path="/login" component={Login} />
             <Route path="/:id/detail" component={Detail} />
             <Route path="/:id/exercise" component={Exercise} />
           </Switch>

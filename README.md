@@ -2,7 +2,9 @@
 
 ## 초기세팅
 
-> react-router-dom, styled-components, styled-reset, prop-types
+> react-router-dom, styled-components, styled-reset, prop-types, react-redux, react-fontawesome
+
+https://www.npmjs.com/package/@fortawesome/react-fontawesome
 
 ## Routes
 
@@ -19,6 +21,8 @@
 > #### Home
 >
 > > ##### Calendar
+>
+> #### Login
 >
 > #### Detail
 >
