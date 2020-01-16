@@ -4,27 +4,22 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const Container = styled.div`
-  position: absolute;
+  position: relative;
   top: 50%;
   color: black;
   font-size: 100px;
+  left: ${props => (props.navOn ? "250px" : "0px")};
+  transition: left 600ms ease-in-out;
 `;
-const Form = styled.form``;
-const Id = styled.input``;
 
-const HomePresenter = ({ handleSubmit, updateTerm, idTerm }) => (
-  <Container>
-    <Form onSubmit={handleSubmit}>
-      <Id placeholder="ID" onChange={updateTerm} value={idTerm} />
-      <Link to={idTerm}>test</Link>
-    </Form>
+const HomePresenter = ({ navOn }) => (
+  <Container navOn={navOn}>
+    <Link to="/login">test</Link>
   </Container>
 );
 
 HomePresenter.propTypes = {
-  handleSubmit: PropTypes.func,
-  updateTerm: PropTypes.func,
-  idTerm: PropTypes.string
+  navOn: PropTypes.bool
 };
 
 export default HomePresenter;

@@ -10,11 +10,10 @@ const Container = styled.div`
   font-size: 100px;
 `;
 const Form = styled.form``;
-const Id = styled.input``;
 
 const LoginPresenter = () => (
   <Container>
-    <Form>test</Form>
+    <Form>LOGIN!!!</Form>
   </Container>
 );
 

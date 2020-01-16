@@ -8,7 +8,6 @@ body{
     font-size: 20px;
     background-color: 	#515585;
     color: blueviolet;
-    font-family: 'Carter One', cursive;
 }
 a{
     color: inherit;

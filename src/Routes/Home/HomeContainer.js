@@ -1,43 +1,16 @@
 import React, { Component } from "react";
 import HomePresenter from "./HomePresenter";
+import { connect } from "react-redux";
 
-export default class extends Component {
-  constructor(props) {
-    super(props);
-    const {
-      match: {
-        params: { id }
-      }
-    } = props;
-    this.state = {
-      idTerm: ""
-    };
-    console.log(id);
-  }
+const mapStateToProps = state => ({
+  bool: state.toggleNav.bool
+});
 
-  handleSubmit = e => {
-    const { idTerm } = this.state;
-    if (idTerm !== "") {
-      this.setState((this.props.match.id = idTerm));
+export default connect(mapStateToProps)(
+  class extends Component {
+    render() {
+      const { bool } = this.props;
+      return <HomePresenter navOn={bool} />;
     }
-  };
-  updateTerm = event => {
-    const {
-      target: { value }
-    } = event;
-    this.setState({
-      idTerm: value
-    });
-  };
-
-  render() {
-    const { idTerm } = this.state;
-    return (
-      <HomePresenter
-        handleSubmit={this.handleSubmit}
-        updateTerm={this.updateTerm}
-        idTerm={idTerm}
-      />
-    );
   }
-}
+);

@@ -37,3 +37,5 @@ https://www.npmjs.com/package/@fortawesome/react-fontawesome
 > > Teachable Muchine
 
 1.13 : props.match.id 이용해서 setState 로 id값 입력받으려다가 그건 모르겠고 Link to="#" 으로 연결은 시켜둠ㅠ
+1.16 : redux 생성해서 액션 컨트롤해야함
+1.17 : redux store 생성 완료 - home에만 navOn boolean값을 이용해 디자인 적용함.

@@ -8,7 +8,7 @@ import Login from "../Routes/Login";
 import Detail from "../Routes/Detail";
 import Exercise from "../Routes/Exercise";
 
-export default class extends Component {
+class Routers extends Component {
   render() {
     return (
       <Router>
@@ -25,3 +25,5 @@ export default class extends Component {
     );
   }
 }
+
+export default Routers;
