@@ -19,7 +19,10 @@ const Container = styled.div`
   p {
     margin-top: 15px;
   }
-  transition: background-color 300ms ease-in-out;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  transition: background-color 600ms;
   transition: color 500ms ease-in-out;
   border-radius: 3%;
 `;
